@@ -59,6 +59,6 @@ To load the ANYmal description to the ROS2 parameter server:
 
 ### Launch files
 
-* **`load.launch`:** Loads the URDF to the parameter server. Meant to be included in higher level launch files.
+* **`load.launch`:** Loads the robot description (URDF) and publishes it to the `/robot_description` topic. Meant to be included in higher level launch files.
 
 * **`standalone.launch`:** A standalone launch file that starts RViz and a joint state publisher to debug the description.

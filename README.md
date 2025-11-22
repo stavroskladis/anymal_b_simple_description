@@ -45,13 +45,17 @@ If you use this work in an academic context, please cite the following publicati
 
 ## Usage
 
-Load the ANYmal description to the ROS parameter server:
+### ROS2 (Humble/Jazzy)
 
-    roslaunch anymal_b_simple_description load.launch
+This package supports ROS2 using `ament_cmake` build system. After building with `colcon build`, you can use the launch files:
 
-To visualize and debug the robot description, start the standalone visualization (note that you have to provide the following additional dependencies: `joint_state_publisher`, `robot_state_publisher`, `rviz`):
+    ros2 launch anymal_b_simple_description standalone.launch
 
-    roslaunch anymal_b_simple_description standalone.launch
+To load the ANYmal description to the ROS2 parameter server:
+
+    ros2 launch anymal_b_simple_description load.launch
+
+**Note:** This package uses ROS2 `ament_cmake` build system and is compatible with ROS2 Jazzy and Humble. The launch files work with ROS2's launch system.
 
 ### Launch files
 

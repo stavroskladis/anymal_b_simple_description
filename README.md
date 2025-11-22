@@ -47,18 +47,12 @@ If you use this work in an academic context, please cite the following publicati
 
 ### ROS2 (Humble/Jazzy)
 
-This package supports ROS2 using `ament_cmake` build system. After building with `colcon build`, you can use the launch files:
+This package supports ROS2 using `ament_cmake` build system. After building with `colcon build`, you can launch ANYmal visualization in RViz:
 
-    ros2 launch anymal_b_simple_description standalone.launch
-
-To load the ANYmal description to the ROS2 parameter server:
-
-    ros2 launch anymal_b_simple_description load.launch
-
-**Note:** This package uses ROS2 `ament_cmake` build system and is compatible with ROS2 Jazzy and Humble. The launch files work with ROS2's launch system.
+```bash
+ros2 launch anymal_b_simple_description view_anymal.launch.py
+```
 
 ### Launch files
 
-* **`load.launch`:** Loads the robot description (URDF) and publishes it to the `/robot_description` topic. Meant to be included in higher level launch files.
-
-* **`standalone.launch`:** A standalone launch file that starts RViz and a joint state publisher to debug the description.
+* **`view_anymal.launch.py`:** A ROS2 Python launch file that starts robot_state_publisher, joint_state_publisher_gui, and rviz2 for visualizing the ANYmal robot model.
